@@ -8,7 +8,9 @@
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
   function sendAJAX() {
-$('#ajax').load('sidebar.html');
+$.get('sidebar.html', function(response) {
+  $('#ajax').html(response)
+});
 $('#load').hide();
   }
   </script>
